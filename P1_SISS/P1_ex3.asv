@@ -1,0 +1,29 @@
+%Ejercicio 3
+
+    T1=1;
+    t=-4:0.1:8;
+    x1=nc_polsA(t/T1,T1);
+    subplot(311)
+    plot(t,x1);
+    title('Senyal T1');
+    
+     T2=2;
+    t=-4:0.1:8;
+    x2=nc_polsA(t/T2,T2);
+    subplot(322)
+    plot(t,x2);
+    title('Senyal T2');
+    
+     T3=0.5;
+    t=-4:0.1:8;
+    x3=nc_polsA(t/T3,T3);
+    subplot(323)
+    plot(t,x3);
+    title('Senyal T3');
+    
+     T4=2;
+    t=-4:0.1:8;
+    x4=nc_polsA(t-(T4/2),T4);
+    subplot(321)
+    plot(t,x4);
+    title('Senyal T4');
