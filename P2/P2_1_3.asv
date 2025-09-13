@@ -1,0 +1,15 @@
+%Exercici 3
+
+n=-10:15;
+L1=8;
+pL1=hc_pols(n,L1);
+subplot(311)
+stem(n,pL1);
+title('Senyal x[n]=p8[n]');
+L2=5;
+pL2=hc_pols(n-2,L2);
+subplot(312)
+stem(n,pL2);
+title('Senyal h[n]=p5[n-2]');
+[y,ny]=nc_convD(pL1,nx,pL2,nh);
+

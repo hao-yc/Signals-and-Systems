@@ -1,0 +1,24 @@
+%Exercici 9
+
+tm = 10*10^-3;
+t = -4:tx:4;
+x=tf_graoD(t);
+subplot(221);
+plot(t,x);
+title('Senyal h(t)');
+
+y = nc_sist_integrador(x,tm);
+subplot(222);
+plot(t,y);
+title('Senyal y(t)');
+
+T = 2;
+x = nc_tf_polsA(t,T);
+subplot(223);
+plot(t,x);
+title('Senyal x(t)');
+
+[y,ty] = nc_convA(x,t,y,t,tm);
+subplot(224);
+plot(ty,y);
+title('Senyal y(t)');
